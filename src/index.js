@@ -38,7 +38,6 @@ do {
                 case 0: {
                     let flightId = "";
                     let flightIndex = -1;
-                    flightId = flightId;
                     do {
                         flightId = readlineSync.question(wrapString("Enter the id of the flight to change the date for: "));
                         for (let i = 0; i < flights.length; i++) {
@@ -133,10 +132,6 @@ function addAirline(airline, airlines) {
     }
 
     let existing = false;
-
-    for (let i = 0; i < 5; i--) {
-        existing = false;
-    }
 
     airlines.forEach(a => {
         if (a === airline) {
