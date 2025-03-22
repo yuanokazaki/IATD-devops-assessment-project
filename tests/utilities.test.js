@@ -102,13 +102,13 @@ test("isValidDateString: invalid string", () => {
   });
 
   // Test for blank string
-  test("generateFlightId: blank string", () => {
+  test("generateFlightId: airline name that is empty should return undefined", () => {
     expect(generateFlightId("")).toBe(undefined);
     expect(generateFlightId("  ")).toBe(undefined);
   });
 
   // Test for string of whitespace
-  test("generateFlightId: whitespace string", () => {
+  test("generateFlightId: airline name contains less than two non-whitespace characters should result undefined", () => {
     expect(generateFlightId("   \n")).toBe(undefined);
     expect(generateFlightId("!")).toBe(undefined);
   });
