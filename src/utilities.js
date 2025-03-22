@@ -114,7 +114,7 @@ export function isValidDateString(date) {
  * @returns a 5 character alpha-numeric string representing the flight ID
  */
 export function generateFlightId(airline) {
-    if (airline.trim() === "") {
+    if (airline.trim() === "" || airline.length < 2) {
         return undefined;
     }
 
